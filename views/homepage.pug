@@ -6,19 +6,18 @@ html
         link(rel="stylesheet", href="/css/style.css")
     body
         h1 #{title}
-        h2 film
-        a( href="/update-cobj") add a film
+        h2 minerals
+        a(href="/update-cobj") add a minerals
         table 
             tr
+                th Mineral Name
                 th Name
-                th Actor name
-                th Rating
-                th Description 
-                th Actor age
-            each film in data 
+                th Symbol
+                th Atomic Number
+                
+            each minerals in data 
                 tr
-                    td= film.properties.film_name
-                    td= film.properties.film_actors
-                    td= film.properties.film_rating
-                    td= film.properties.file_description               
-                    td= film.properties.actor_age
+                    td= minerals.properties.mineral_name
+                    td= minerals.properties.name
+                    td= minerals.properties.symbol
+                    td= minerals.properties.atomic_number
