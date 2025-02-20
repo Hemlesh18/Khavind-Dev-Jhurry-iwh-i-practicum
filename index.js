@@ -49,19 +49,15 @@ app.get("/update-cobj", (req, res) => {
 
 // * Code for Route 3 goes here
 app.post("/update-cobj", async (req, res) => {
-  const { film_name, film_actors, film_rating, file_description, actor_age } =
+  const { mineral_name,name,atomic_number,symbol, } =
     req.body;
   const update = {
     properties: {
-      film_name,
-      film_actors,
-      film_rating,
-      file_description,
-      actor_age,
+      mineral_name,name,atomic_number,symbol,
     },
   };
 
-  const customObject = `https://api.hubspot.com/crm/v3/objects/films`;
+  const customObject = `https://api.hubspot.com/crm/v3/objects/minerals`;
   const headers = {
     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
